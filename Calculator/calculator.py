@@ -6,43 +6,45 @@ from tkinter import Label
 top = tkinter.Tk()
 top.geometry('450x2000')
 top.title("Calculator")
-w = Label(top, text="one")
+w = Label(top, text="")
 w.grid(row=0, column=0)
 
 
 
 
 def oneCallBack():
-   w.config(text="1")
+   w.config(text=w.cget("text")+"1")
 
 def twoCallBack():
-   w.config(text="2")
+   w.config(text=w.cget("text")+"2")
 def threeCallback():
-   w.config(text="3")
+   w.config(text=w.cget("text")+"3")
 def fourCallback():
-   w.config(text="4")
+   w.config(text=w.cget("text")+"4")
 def fiveCallback():
-   w.config(text="5")
+   w.config(text=w.cget("text")+"5")
 def sixCallback():
-   w.config(text="6")
+   w.config(text=w.cget("text")+"6")
 def sevenCallback():
-   w.config(text="7")
+   w.config(text=w.cget("text")+"7")
 def eightCallback():
-   w.config(text="8")
+   w.config(text=w.cget("text")+"8")
 def nineCallback():
-   w.config(text="9")
+   w.config(text=w.cget("text")+"9")
 def zeroCallback():
-   w.config(text="0")
+   w.config(text=w.cget("text")+"0")
 def AddCallback():
-   w.config(text="+")
+   w.config(text=w.cget("text")+"+")
 def Subtractllback():
-   w.config(text="-")
+   w.config(text=w.cget("text")+"-")
 def multiplyllback():
-   w.config(text="X")
+   w.config(text=w.cget("text")+"X")
 def equalllback():
-  w.config(text="=")
+   w.config(text=(eval(w.cget("text"))))
 def divideCallback():
-   w.config(text="/")
+   w.config(text=w.cget("text")+"")
+def clearCallback():
+   w.config(text="")
 
 B = tkinter.Button(top, text ="1", command = oneCallBack)
 B2 = tkinter.Button(top, text ="2", command = twoCallBack)
@@ -59,6 +61,7 @@ BM = tkinter.Button(top, text ="X", command = multiplyllback)
 BE = tkinter.Button(top, text ="=", command = equalllback)
 B0 = tkinter.Button(top, text ="0", command = zeroCallback)
 BD = tkinter.Button(top, text ="/", command = divideCallback)
+BC = tkinter.Button(top, text ="C", command = clearCallback)
 
 
 B.grid(row=1, column=0)
@@ -76,7 +79,7 @@ BM.grid(row=3, column=3)
 BE.grid(row=4, column=3)
 B0.grid(row=4, column=0)
 BD.grid(row=4, column=1)
-
+BC.grid(row=4, column=2)
 
 
 
