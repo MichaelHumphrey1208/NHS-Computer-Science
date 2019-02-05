@@ -4,10 +4,10 @@ import tkinter
 from tkinter import Label
 
 top = tkinter.Tk()
-top.geometry('450x2000')
+top.geometry('200x320')
 top.title("Calculator")
 w = Label(top, text="")
-w.grid(row=0, column=0)
+w.grid(row=0, column=0, columnspan=5,)
 
 
 
@@ -38,30 +38,32 @@ def AddCallback():
 def Subtractllback():
    w.config(text=w.cget("text")+"-")
 def multiplyllback():
-   w.config(text=w.cget("text")+"X")
+   w.config(text=w.cget("text")+"*")
 def equalllback():
    w.config(text=(eval(w.cget("text"))))
 def divideCallback():
-   w.config(text=w.cget("text")+"")
+   w.config(text=w.cget("text")+"//")
 def clearCallback():
    w.config(text="")
 
-B = tkinter.Button(top, text ="1", command = oneCallBack)
-B2 = tkinter.Button(top, text ="2", command = twoCallBack)
-B3 = tkinter.Button(top, text ="3", command = threeCallback)
-B4 = tkinter.Button(top, text ="4", command = fourCallback)
-B5 = tkinter.Button(top, text ="5", command = fiveCallback)
-B6 = tkinter.Button(top, text ="6", command = sixCallback)
-B7 = tkinter.Button(top, text ="7", command = sevenCallback)
-B8 = tkinter.Button(top, text ="8", command = eightCallback)
-B9 = tkinter.Button(top, text ="9", command = nineCallback)
-BA = tkinter.Button(top, text ="+", command = AddCallback)
-BS = tkinter.Button(top, text ="-", command = Subtractllback)
-BM = tkinter.Button(top, text ="X", command = multiplyllback)
-BE = tkinter.Button(top, text ="=", command = equalllback)
-B0 = tkinter.Button(top, text ="0", command = zeroCallback)
-BD = tkinter.Button(top, text ="/", command = divideCallback)
-BC = tkinter.Button(top, text ="C", command = clearCallback)
+B = tkinter.Button(top, text ="1", command = oneCallBack, height=4, width=4)
+B2 = tkinter.Button(top, text ="2", command = twoCallBack, height=4, width=4)
+B3 = tkinter.Button(top, text ="3", command = threeCallback, height=4, width=4)
+B4 = tkinter.Button(top, text ="4", command = fourCallback, height=4, width=4)
+B5 = tkinter.Button(top, text ="5", command = fiveCallback, height=4, width=4)
+B6 = tkinter.Button(top, text ="6", command = sixCallback, height=4, width=4)
+B7 = tkinter.Button(top, text ="7", command = sevenCallback, height=4, width=4)
+B8 = tkinter.Button(top, text ="8", command = eightCallback, height=4, width=4)
+B9 = tkinter.Button(top, text ="9", command = nineCallback, height=4, width=4)
+BA = tkinter.Button(top, text ="+", command = AddCallback, height=4, width=4)
+BS = tkinter.Button(top, text ="-", command = Subtractllback, height=4, width=4)
+BM = tkinter.Button(top, text ="X", command = multiplyllback, height=4, width=4)
+BD = tkinter.Button(top, text ="/", command = divideCallback, height=4, width=4)
+B0 = tkinter.Button(top, text ="0", command = zeroCallback, height=4, width=4)
+BC = tkinter.Button(top, text ="C", command = clearCallback, height=4, width=4)
+BE = tkinter.Button(top, text ="=", command = equalllback, height=4, width=4)
+Bdot = tkinter.Button(top, text ="=", command = equalllback, height=4, width=4)
+
 
 
 B.grid(row=1, column=0)
@@ -80,6 +82,8 @@ BE.grid(row=4, column=3)
 B0.grid(row=4, column=0)
 BD.grid(row=4, column=1)
 BC.grid(row=4, column=2)
+Bdot.grid(row=5, column=2)
+
 
 
 
