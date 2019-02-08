@@ -4,7 +4,7 @@ import tkinter
 from tkinter import Label
 
 top = tkinter.Tk()
-top.geometry('200x320')
+top.geometry('175x365')
 top.title("Calculator")
 w = Label(top, text="")
 w.grid(row=0, column=0, columnspan=5,)
@@ -40,11 +40,13 @@ def Subtractllback():
 def multiplyllback():
    w.config(text=w.cget("text")+"*")
 def equalllback():
-   w.config(text=(eval(w.cget("text"))))
+   w.config(text=str((eval(w.cget("text")))))
 def divideCallback():
    w.config(text=w.cget("text")+"//")
 def clearCallback():
    w.config(text="")
+def dotcallback():
+   w.config(text=w.cget("text")+".")
 
 B = tkinter.Button(top, text ="1", command = oneCallBack, height=4, width=4)
 B2 = tkinter.Button(top, text ="2", command = twoCallBack, height=4, width=4)
@@ -61,8 +63,8 @@ BM = tkinter.Button(top, text ="X", command = multiplyllback, height=4, width=4)
 BD = tkinter.Button(top, text ="/", command = divideCallback, height=4, width=4)
 B0 = tkinter.Button(top, text ="0", command = zeroCallback, height=4, width=4)
 BC = tkinter.Button(top, text ="C", command = clearCallback, height=4, width=4)
-BE = tkinter.Button(top, text ="=", command = equalllback, height=4, width=4)
-Bdot = tkinter.Button(top, text ="=", command = equalllback, height=4, width=4)
+BE = tkinter.Button(top, text ="=", command = equalllback, height=4, width=19)
+Bdot = tkinter.Button(top, text =".", command = dotcallback, height=4, width=4)
 
 
 
@@ -78,13 +80,14 @@ B9.grid(row=3, column=2)
 BA.grid(row=1, column=3)
 BS.grid(row=2, column=3)
 BM.grid(row=3, column=3)
-BE.grid(row=4, column=3)
+BE.grid(row=5, column=0, columnspan=4)
 B0.grid(row=4, column=0)
-BD.grid(row=4, column=1)
+BD.grid(row=4, column=3)
 BC.grid(row=4, column=2)
-Bdot.grid(row=5, column=2)
+Bdot.grid(row=4, column=1)
 
 
 
 
 top.mainloop()
+
