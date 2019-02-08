@@ -42,7 +42,13 @@ def multiplyllback():
 def equalllback():
    w.config(text=str((eval(w.cget("text")))))
 def divideCallback():
-   w.config(text=w.cget("text")+"//")
+   mytext=w.cget("text")
+   if mytext[-1:] in [".","*","//","-","+"]:
+       print('operator already present')
+   else:
+       w.config(text=w.cget("text")+"//")
+       
+       
 def clearCallback():
    w.config(text="")
 def dotcallback():
@@ -90,4 +96,3 @@ Bdot.grid(row=4, column=1)
 
 
 top.mainloop()
-
