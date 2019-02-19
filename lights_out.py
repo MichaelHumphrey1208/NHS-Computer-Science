@@ -36,6 +36,7 @@ def fourteenCallback():
     print("!")
 def fifteenCallback():
     print("!")
+    B14['bg'] = '#FFFF00'
 def sixteenCallback():
     print("!")
 B1 = tkinter.Button(top, text ="1", command = oneCallback, height=4, width=4)
@@ -77,5 +78,4 @@ B16.grid(row=4, column=3)
 
 
 top.mainloop()
-
 
