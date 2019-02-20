@@ -2,104 +2,124 @@ import tkinter
 
 top = tkinter.Tk()
 
-top.geometry('175x365')
+top.geometry('200x380')
 top.title("lights out")
+
+def toggels(B):
+    if B.cget('fg') == '#FFFF00':
+        B['fg'] = '#808080'
+    else:
+        B['fg'] = '#FFFF00'
+def level1callback():
+    print("level one")
+def level1callback():
+    print("level one")
+def level1callback():
+    print("level one")
+def level1callback():
+    print("level one")
+def level1callback():
+    print("level one")
 def oneCallback():
     print("one!")
-    B2['fg'] = '#FFFF00'
-    B5['fg'] = '#FFFF00'
-    B1['fg'] = '#808080'
+    toggels(B1)
+    toggels(B2)
+    toggels(B5)
 def twoCallback():
     print("two!")
-    B1['fg'] = '#FFFF00'
-    B3['fg'] = '#FFFF00'
-    B6['fg'] = '#FFFF00'
-    B2['fg'] = '#808080'
+    toggels(B1)
+    toggels(B2)
+    toggels(B3)
+    toggels(B6)
 def threeCallback():
     print("mabey!")
-    B2['fg'] = '#FFFF00'
-    B4['fg'] = '#FFFF00'
-    B7['fg'] = '#FFFF00'
-    B3['fg'] = '#808080'
+    toggels(B3)
+    toggels(B7)
+    toggels(B4)
+    toggels(B2)
 def fourCallback():
     print("!")
-    B3['fg'] = '#FFFF00'
-    B8['fg'] = '#FFFF00'
-    B4['fg'] = '#808080'
+    toggels(B3)
+    toggels(B4)
+    toggels(B8)
 def fiveCallback():
     print("5")
-    B1['fg'] = '#FFFF00'
-    B6['fg'] = '#FFFF00'
-    B9['fg'] = '#FFFF00'
-    B5['fg'] = '#808080'
+    toggels(B1)
+    toggels(B6)
+    toggels(B9)
+    toggels(B5)
 def sixCallback():
     print("!")
-    B2['fg'] = '#FFFF00'
-    B7['fg'] = '#FFFF00'
-    B5['fg'] = '#FFFF00'
-    B10['fg'] = '#FFFF00'
-    B6['bg'] = '#808080'
+    toggels(B2)
+    toggels(B7)
+    toggels(B5)
+    toggels(B10)
+    toggels(B6)
 def sevenCallback():
     print("!")
-    B8['fg'] = '#FFFF00'
-    B11['fg'] = '#FFFF00'
-    B6['fg'] = '#FFFF00'
-    B3['fg'] = '#FFFF00'
-    B7['bg'] = '#808080'
+    toggels(B3)
+    toggels(B8)
+    toggels(B7)
+    toggels(B6)
+    toggels(B11)
 def eightCallback():
     print("!")
-    B4['fg'] = '#FFFF00'
-    B7['fg'] = '#FFFF00'
-    B12['fg'] = '#FFFF00'
-    B8['fg'] = '#808080'
+    toggels(B4)
+    toggels(B8)
+    toggels(B12)
+    toggels(B7)
 def nineCallback():
     print("!")
-    B10['fg'] = '#FFFF00'
-    B13['fg'] = '#FFFF00'
-    B5['fg'] = '#FFFF00'
-    B9['fg'] = '#808080'
+    toggels(B9)
+    toggels(B5)
+    toggels(B10)
+    toggels(B13)
 def tenCallback():
     print("!")
-    B6['fg'] = '#FFFF00'
-    B11['fg'] = '#FFFF00'
-    B14['fg'] = '#FFFF00'
-    B9['fg'] = '#FFFF00'
-    B10['bg'] = '#808080'
+    toggels(B10)
+    toggels(B11)
+    toggels(B14)
+    toggels(B6)
+    toggels(B9)
 def elevenCallback():
     print("!")
-    B7['fg'] = '#FFFF00'
-    B12['fg'] = '#FFFF00'
-    B15['fg'] = '#FFFF00'
-    B10['fg'] = '#FFFF00'
-    B11['bg'] = '#808080'
+    toggels(B11)
+    toggels(B7)
+    toggels(B12)
+    toggels(B15)
+    toggels(B10)
 def tweleveCallback():
     print("")
-    B8['fg'] = '#FFFF00'
-    B11['fg'] = '#FFFF00'
-    B16['fg'] = '#FFFF00'
-    B12['fg'] = '#808080'
+    toggels(B12)
+    toggels(B11)
+    toggels(B8)
+    toggels(B16)
 def thrirteenCallback():
     print("!")
-    B9['fg'] = '#FFFF00'
-    B14['fg'] = '#FFFF00'
-    B13['fg'] = '#808080'
+    toggels(B13)
+    toggels(B14)
+    toggels(B9)
 def fourteenCallback():
     print("!")
-    B13['fg'] = '#FFFF00'
-    B15['fg'] = '#FFFF00'
-    B10['fg'] = '#FFFF00'
-    B14['fg'] = '#808080'
+    toggels(B14)
+    toggels(B13)
+    toggels(B15)
+    toggels(B10)
 def fifteenCallback():
     print("!")
-    B11['fg'] = '#FFFF00'
-    B14['fg'] = '#FFFF00'
-    B16['fg'] = '#FFFF00'
-    B15['fg'] ='#808080'
+    toggels(B15)
+    toggels(B11)
+    toggels(B14)
+    toggels(B16)
 def sixteenCallback():
     print("!")
-    B12['fg'] = '#FFFF00'
-    B15['fg'] = '#FFFF00'
-    B16['fg'] = '#808080'
+    toggels(B16)
+    toggels(B15)
+    toggels(B12)
+Bl1 = tkinter.Button(top, text ="Lv0", command = level1callback, height=4, width=4)
+Bl2 = tkinter.Button(top, text ="Lv0", command = level1callback, height=4, width=4)
+Bl3 = tkinter.Button(top, text ="Lv0", command = level1callback, height=4, width=4)
+Bl4 = tkinter.Button(top, text ="Lv0", command = level1callback, height=4, width=4)
 B1 = tkinter.Button(top, text ="1", command = oneCallback, height=4, width=4)
 B2 = tkinter.Button(top, text ="2", command = twoCallback, height=4, width=4)
 B3 = tkinter.Button(top, text ="3", command = threeCallback, height=4, width=4)
@@ -117,7 +137,10 @@ B14 = tkinter.Button(top, text ="14", command = fourteenCallback, height=4, widt
 B15 = tkinter.Button(top, text ="15", command = fifteenCallback, height=4, width=4)
 B16 = tkinter.Button(top, text ="16", command = sixteenCallback, height=4, width=4)
 
-
+Bl1.grid(row=0, column=0)
+Bl2.grid(row=0, column=1)
+Bl3.grid(row=0, column=2)
+Bl4.grid(row=0, column=3)
 B1.grid(row=1, column=0)
 B2.grid(row=1, column=1)
 B3.grid(row=1, column=2)
