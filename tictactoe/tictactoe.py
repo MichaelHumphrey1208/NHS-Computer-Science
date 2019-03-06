@@ -4,6 +4,7 @@ top = tkinter.Tk()
 top.geometry('200x380')
 top.title("two_tic_tac_toe")
 turn="X"
+Won= False
 def toggels():
     global turn
     if turn =="X":
@@ -11,54 +12,110 @@ def toggels():
     else:
         turn= 'X'
 def win():
-   if bc1.cget('text') == 'X' and bc4.cget('text') == 'X' and bc7.cget('text') == 'X' and bc3.cget('text') == 'X' and bc6.cget('text') == 'X' and bc9.cget('text') == 'X' and bc2.cget('text') == 'X' and bc4.cget('text') == 'X',and b8.cget('text') == 'X'
-
+   global Won
+   if Bc1.cget('text') == 'X' and Bc4.cget('text') == 'X' and Bc7.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc2.cget('text') == 'X' and Bc5.cget('text') == 'X' and Bc8.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc3.cget('text') == 'X' and Bc6.cget('text') == 'X' and Bc9.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc1.cget('text') == 'X' and Bc5.cget('text') == 'X' and Bc9.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc1.cget('text') == 'X' and Bc2.cget('text') == 'X' and Bc3.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc4.cget('text') == 'X' and Bc5.cget('text') == 'X' and Bc6.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc7.cget('text') == 'X' and Bc8.cget('text') == 'X' and Bc9.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc3.cget('text') == 'X' and Bc5.cget('text') == 'X' and Bc7.cget('text') == 'X':
+       print("you win")
+       Won=True
+   if Bc1.cget('text') == 'O' and Bc4.cget('text') == 'O' and Bc7.cget('text') == 'O':
+       print("you win")
+       Won=True
+   if Bc2.cget('text') == 'O' and Bc5.cget('text') == 'O' and Bc8.cget('text') == 'O':
+       print("you win")
+       Won=True
+   if Bc3.cget('text') == 'O' and Bc6.cget('text') == 'O' and Bc9.cget('text') == 'O':
+       print("you win")
+       Won=True
+   if Bc1.cget('text') == 'O' and Bc5.cget('text') == 'O' and Bc9.cget('text') == 'O':
+       print("you win")
+       Won=True
+   if Bc1.cget('text') == 'O' and Bc2.cget('text') == 'O' and Bc3.cget('text') == 'O':
+       print("you win")
+       Won=True
+   if Bc4.cget('text') == 'O' and Bc5.cget('text') == 'O' and Bc6.cget('text') == 'O':
+       print("you win")
+       Won=True
+   if Bc7.cget('text') == 'O' and Bc8.cget('text') == 'O' and Bc9.cget('text') == 'O':
+       print("you win")
+       Won=True
+   if Bc3.cget('text') == 'O' and Bc5.cget('text') == 'O' and Bc7.cget('text') == 'O':
+       print("you win")
+       Won=True
 def b1callback():
     global turn
-    Bc1.configure(text=turn)
-    toggels()
-    win()
+    global Won
+    if not Won:
+        Bc1.configure(text=turn)
+        toggels()
+        win()
 def b2callback():
     print("two")
     global turn
     Bc2.configure(text=turn)
     toggels()
+    win()
 def b3callback():
     print("two")
     global turn
     Bc3.configure(text=turn)
     toggels()
+    win()
 def b4callback():
     print("two")
     global turn
     Bc4.configure(text=turn)
     toggels()
+    win()
 def b5callback():
     print("two")
     global turn
     Bc5.configure(text=turn)
     toggels()
+    win()
 def b6callback():
     print("two")
     global turn
     Bc6.configure(text=turn)
     toggels()
+    win()
 def b7callback():
     print("two")
     global turn
     Bc7.configure(text=turn)
     toggels()
+    win()
 def b8callback():
     print("two")
     global turn
     Bc8.configure(text=turn)
     toggels()
+    win()
 def b9callback():
     print("two")
     global turn
     Bc9.configure(text=turn)
     toggels()
-
+    win()
 Bc1 = tkinter.Button(top, text ="1", command = b1callback, height=4, width=4)
 Bc2 = tkinter.Button(top, text ="2", command = b2callback, height=4, width=4)
 Bc3 = tkinter.Button(top, text ="3", command = b3callback, height=4, width=4)
