@@ -2,17 +2,17 @@ import tkinter
 
 top = tkinter.Tk()
 
-top.geometry('200x380')
+top.geometry('200x340')
 top.title("lights out")
 
 def toggels(B):
-    if B.cget('bg') == '#FFFF00':
-        B['bg'] = '#808080'
+    if B.cget('fg') == '#FFFF00':
+        B['fg'] = '#808080'
     else:
-        B['bg'] = '#FFFF00'
+        B['fg'] = '#FFFF00'
 def clear(B):
-    if B.cget('bg') == '#FFFF00':
-        B['bg'] = '#808080'
+    if B.cget('fg') == '#FFFF00':
+        B['fg'] = '#808080'
 def level0callback():
     print("level zero")
     clear(B1)
@@ -225,27 +225,27 @@ def sixteenCallback():
     toggels(B16)
     toggels(B15)
     toggels(B12)
-Bl0 = tkinter.Button(top, text ="Lv0", command = level0callback, height=4, width=4)
-Bl1 = tkinter.Button(top, text ="Lv1", command = level1callback, height=4, width=4)
-Bl2 = tkinter.Button(top, text ="Lv2", command = level2callback, height=4, width=4)
-Bl3 = tkinter.Button(top, text ="Lv3", command = level3callback, height=4, width=4)
-Bl4 = tkinter.Button(top, text ="Lv4", command = level4callback, height=4, width=4)
-B1 = tkinter.Button(top, text ="1", command = oneCallback, height=4, width=4)
-B2 = tkinter.Button(top, text ="2", command = twoCallback, height=4, width=4)
-B3 = tkinter.Button(top, text ="3", command = threeCallback, height=4, width=4)
-B4 = tkinter.Button(top, text ="4", command = fourCallback, height=4, width=4)
-B5 = tkinter.Button( top, text ="5",command = fiveCallback, height=4, width=4)
-B6 = tkinter.Button(top, text ="6", command = sixCallback, height=4, width=4)
-B7 = tkinter.Button(top, text ="7", command = sevenCallback, height=4, width=4)
-B8 = tkinter.Button(top, text ="8", command = eightCallback, height=4, width=4)
-B9 = tkinter.Button(top, text ="9", command = nineCallback, height=4, width=4)
-B10 = tkinter.Button(top, text ="10", command = tenCallback, height=4, width=4)
-B11 = tkinter.Button(top, text ="11", command = elevenCallback, height=4, width=4)
-B12 = tkinter.Button(top, text ="12", command = tweleveCallback, height=4, width=4)
-B13 = tkinter.Button(top, text ="13", command = thrirteenCallback, height=4, width=4)
-B14 = tkinter.Button(top, text ="14", command = fourteenCallback, height=4, width=4)
-B15 = tkinter.Button(top, text ="15", command = fifteenCallback, height=4, width=4)
-B16 = tkinter.Button(top, text ="16", command = sixteenCallback, height=4, width=4)
+Bl0 = tkinter.Button(top, text ="Lv0", bg = "#808080", command = level0callback, height=4, width=4)
+Bl1 = tkinter.Button(top, text ="Lv1", bg = "#808080", command = level1callback, height=4, width=4)
+Bl2 = tkinter.Button(top, text ="Lv2", bg = "#808080", command = level2callback, height=4, width=4)
+Bl3 = tkinter.Button(top, text ="Lv3", bg = "#808080", command = level3callback, height=4, width=4)
+Bl4 = tkinter.Button(top, text ="Lv4", bg = "#808080", command = level4callback, height=4, width=4)
+B1 = tkinter.Button(top, text ="1",    bg = "#808080", command = oneCallback, height=4, width=4)
+B2 = tkinter.Button(top, text ="2",    bg = "#808080", command = twoCallback, height=4, width=4)
+B3 = tkinter.Button(top, text ="3",    bg = "#808080", command = threeCallback, height=4, width=4)
+B4 = tkinter.Button(top, text ="4",    bg = "#808080", command = fourCallback, height=4, width=4)
+B5 = tkinter.Button( top, text ="5",   bg = "#808080", command = fiveCallback, height=4, width=4)
+B6 = tkinter.Button(top, text ="6",    bg = "#808080", command = sixCallback, height=4, width=4)
+B7 = tkinter.Button(top, text ="7",    bg = "#808080", command = sevenCallback, height=4, width=4)
+B8 = tkinter.Button(top, text ="8",    bg = "#808080", command = eightCallback, height=4, width=4)
+B9 = tkinter.Button(top, text ="9",    bg = "#808080", command = nineCallback, height=4, width=4)
+B10 = tkinter.Button(top, text ="10",  bg = "#808080", command = tenCallback, height=4, width=4)
+B11 = tkinter.Button(top, text ="11",  bg = "#808080", command = elevenCallback, height=4, width=4)
+B12 = tkinter.Button(top, text ="12",  bg = "#808080", command = tweleveCallback, height=4, width=4)
+B13 = tkinter.Button(top, text ="13",  bg = "#808080", command = thrirteenCallback, height=4, width=4)
+B14 = tkinter.Button(top, text ="14",  bg = "#808080", command = fourteenCallback, height=4, width=4)
+B15 = tkinter.Button(top, text ="15",  bg = "#808080", command = fifteenCallback, height=4, width=4)
+B16 = tkinter.Button(top, text ="16",  bg = "#808080", command = sixteenCallback, height=4, width=4)
 
 Bl0.grid(row=0, column=0)
 Bl1.grid(row=0, column=1)
