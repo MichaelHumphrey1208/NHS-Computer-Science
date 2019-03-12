@@ -23,54 +23,63 @@ def ComputerM():
                 if Bc1.cget('text') == 'X' or Bc1.cget('text') == 'O':
                     continue
                 else:
+                    toggels()
                     Bc1.config(text=turn)
                     break
             if value == 2:
                 if Bc2.cget('text') == 'X' or Bc2.cget('text') == 'O':
                     continue
                 else:
+                    global turn
                     Bc2.config(text=turn)
                     break
             if value == 3:
                 if Bc3.cget('text') == 'X' or Bc3.cget('text') == 'O':
                     continue
                 else:
+                    global turn
                     Bc3.config(text=turn)
                     break
             if value == 4:
                 if Bc4.cget('text') == 'X' or Bc4.cget('text') == 'O':
                     continue
                 else:
+                    toggels()
                     Bc4.config(text=turn)
                     break
             if value == 5:
                 if Bc5.cget('text') == 'X' or Bc5.cget('text') == 'O':
                     continue
                 else:
+                    toggels()
                     Bc5.config(text=turn)
                     break
             if value == 6:
                 if Bc6.cget('text') == 'X' or Bc6.cget('text') == 'O':
                     continue
                 else:
+                    toggels()
                     Bc6.config(text=turn)
                     break
             if value == 7:
                 if Bc7.cget('text') == 'X' or Bc7.cget('text') == 'O':
                     continue
                 else:
+                    toggels()
                     Bc7.config(text=turn)
                     break
             if value == 8:
                 if Bc8.cget('text') == 'X' or Bc8.cget('text') == 'O':
                     continue
                 else:
+                    toggels()
                     Bc8.config(text=turn)
                     break
             if value == 9:
                 if Bc9.cget('text') == 'X' or Bc9.cget('text') == 'O':
                     continue
                 else:
+                    toggels()
                     Bc9.config(text=turn)
                     break
         
@@ -235,6 +244,7 @@ def b9callback():
         Bc9.configure(text=turn)
         toggels()
         win()
+    ComputerM()
 Bc1 = tkinter.Button(top, text ="1", command = b1callback, height=4, width=4)
 Bc2 = tkinter.Button(top, text ="2", command = b2callback, height=4, width=4)
 Bc3 = tkinter.Button(top, text ="3", command = b3callback, height=4, width=4)
