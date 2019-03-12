@@ -15,14 +15,64 @@ def clearing():
     Bc7.configure(text=' ')
     Bc8.configure(text=' ')
     Bc9.configure(text=' ')
-def Rnm():
+def ComputerM():
     while True:
         value =random.randint(1,9)
-         if value == 1:
-             if Bc1.cget('text') == 'x' or Bc1.cget('text') == 'O'
+        if value == 1:
+            if Bc1.cget('text') == 'X' or Bc1.cget('text') == 'O':
+                continue
+            else:
+                Bc1.config('text') = 'O'
                 break
-         else:
-            Bc1.cget('text') == 'O'   
+        if value == 2:
+            if Bc2.cget('text') == 'X' or Bc2.cget('text') == 'O':
+                continue
+            else:
+                Bc2.config('text') = 'O'
+                break
+        if value == 3:
+            if Bc3.cget('text') == 'X' or Bc3.cget('text') == 'O':
+                continue
+            else:
+                Bc3.config('text') = 'O'
+                break
+        if value == 4:
+            if Bc4.cget('text') == 'X' or Bc4.cget('text') == 'O':
+                continue
+            else:
+                Bc4.config('text') = 'O'
+                break
+        if value == 5:
+            if Bc5.cget('text') == 'X' or Bc5.cget('text') == 'O':
+                continue
+            else:
+                Bc5.config('text') = 'O'
+                break
+        if value == 6:
+            if Bc6.cget('text') == 'X' or Bc6.cget('text') == 'O':
+                continue
+            else:
+                Bc6.config('text') = 'O'
+                break
+        if value == 7:
+            if Bc7.cget('text') == 'X' or Bc7.cget('text') == 'O':
+                continue
+            else:
+                Bc7.config('text') = 'O'
+                break
+        if value == 8:
+            if Bc8.cget('text') == 'X' or Bc8.cget('text') == 'O':
+                continue
+            else:
+                Bc8.config('text') = 'O'
+                break
+        if value == 9:
+            if Bc9.cget('text') == 'X' or Bc9.cget('text') == 'O':
+                continue
+            else:
+                Bc9.config('text') = 'O'
+                break
+        
 Won= False
 def toggels():
     global turn
@@ -95,6 +145,14 @@ def win():
        print("you win")
        #clearing()
        Won=True
+computer= False
+def compcallback():
+    print("zero")
+    global computer
+    if computer == False
+        computer=True
+    else computer=False
+    
 def b1callback():
     global turn
     global Won
@@ -102,7 +160,7 @@ def b1callback():
         Bc1.configure(text=turn)
         toggels()
         win()
-    Rnm()
+    ComputerM()
 def b2callback():
     print("two")
     global turn
@@ -112,23 +170,25 @@ def b2callback():
         toggels()
         win()
 def b3callback():
-    print("two")
+    print("three")
     global turn
     global Won
     if not Won:
         Bc3.configure(text=turn)
         toggels()
         win()
+    ComputerM
 def b4callback():
-    print("two")
+    print("four")
     global turn
+    ComputerM()
     global Won
     if not Won:
         Bc4.configure(text=turn)
         toggels()
         win()
 def b5callback():
-    print("two")
+    print("five")
     global turn
     global Won
     if not Won:
@@ -136,7 +196,7 @@ def b5callback():
         toggels()
         win()
 def b6callback():
-    print("two")
+    print("six")
     global turn
     global Won
     if not Won:
@@ -144,7 +204,7 @@ def b6callback():
         toggels()
         win()
 def b7callback():
-    print("two")
+    print("seven")
     global turn
     global Won
     if not Won:
@@ -152,7 +212,7 @@ def b7callback():
         toggels()
         win()
 def b8callback():
-    print("two")
+    print("eight")
     global turn
     global Won
     if not Won:
@@ -160,7 +220,7 @@ def b8callback():
         toggels()
         win()
 def b9callback():
-    print("two")
+    print("ninne")
     global turn
     global Won
     if not Won:
@@ -176,7 +236,9 @@ Bc6 = tkinter.Button(top, text ="6", command = b6callback, height=4, width=4)
 Bc7 = tkinter.Button(top, text ="7", command = b7callback, height=4, width=4)
 Bc8 = tkinter.Button(top, text ="8", command = b8callback, height=4, width=4)
 Bc9 = tkinter.Button(top, text ="9", command = b9callback, height=4, width=4)
+Bc0 = tkinter.Button(top, text ="Computer_mode", command = compcallback, height=4, width=13,)
 
+Bc0.grid(row=0, column=0, columnspan=3)
 Bc1.grid(row=1, column=0)
 Bc2.grid(row=1, column=1)
 Bc3.grid(row=1, column=2)
