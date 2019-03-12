@@ -30,14 +30,14 @@ def ComputerM():
                 if Bc2.cget('text') == 'X' or Bc2.cget('text') == 'O':
                     continue
                 else:
-                    global turn
+                    toggels()
                     Bc2.config(text=turn)
                     break
             if value == 3:
                 if Bc3.cget('text') == 'X' or Bc3.cget('text') == 'O':
                     continue
                 else:
-                    global turn
+                    toggels()
                     Bc3.config(text=turn)
                     break
             if value == 4:
