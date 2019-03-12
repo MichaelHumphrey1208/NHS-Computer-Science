@@ -169,7 +169,6 @@ def b1callback():
     global Won
     if not Won:
         Bc1.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b2callback():
@@ -178,7 +177,6 @@ def b2callback():
     global Won
     if not Won:
         Bc2.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b3callback():
@@ -187,17 +185,14 @@ def b3callback():
     global Won
     if not Won:
         Bc3.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b4callback():
     print("four")
     global turn
-    ComputerM()
     global Won
     if not Won:
         Bc4.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b5callback():
@@ -206,7 +201,6 @@ def b5callback():
     global Won
     if not Won:
         Bc5.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b6callback():
@@ -215,7 +209,6 @@ def b6callback():
     global Won
     if not Won:
         Bc6.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b7callback():
@@ -224,7 +217,6 @@ def b7callback():
     global Won
     if not Won:
         Bc7.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b8callback():
@@ -233,7 +225,6 @@ def b8callback():
     global Won
     if not Won:
         Bc8.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 def b9callback():
@@ -242,7 +233,6 @@ def b9callback():
     global Won
     if not Won:
         Bc9.configure(text=turn)
-        toggels()
         win()
     ComputerM()
 Bc1 = tkinter.Button(top, text ="1", command = b1callback, height=4, width=4)
