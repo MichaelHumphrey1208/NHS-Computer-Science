@@ -2,17 +2,17 @@ import tkinter
 
 top = tkinter.Tk()
 
-top.geometry('200x340')
+top.geometry('201x341')
 top.title("lights out")
 
 def toggels(B):
-    if B.cget('fg') == '#FFFF00':
-        B['fg'] = '#808080'
+    if B.cget('bg') == '#FFFF00':
+        B['bg'] = '#808080'
     else:
-        B['fg'] = '#FFFF00'
+        B['bg'] = '#FFFF00'
 def clear(B):
-    if B.cget('fg') == '#FFFF00':
-        B['fg'] = '#808080'
+    if B.cget('bg') == '#FFFF00':
+        B['bg'] = '#808080'
 def level0callback():
     print("level zero")
     clear(B1)
