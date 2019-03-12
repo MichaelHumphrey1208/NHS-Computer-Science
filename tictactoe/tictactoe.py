@@ -16,62 +16,63 @@ def clearing():
     Bc8.configure(text=' ')
     Bc9.configure(text=' ')
 def ComputerM():
-    while True:
-        value =random.randint(1,9)
-        if value == 1:
-            if Bc1.cget('text') == 'X' or Bc1.cget('text') == 'O':
-                continue
-            else:
-                Bc1.config('text') = 'O'
-                break
-        if value == 2:
-            if Bc2.cget('text') == 'X' or Bc2.cget('text') == 'O':
-                continue
-            else:
-                Bc2.config('text') = 'O'
-                break
-        if value == 3:
-            if Bc3.cget('text') == 'X' or Bc3.cget('text') == 'O':
-                continue
-            else:
-                Bc3.config('text') = 'O'
-                break
-        if value == 4:
-            if Bc4.cget('text') == 'X' or Bc4.cget('text') == 'O':
-                continue
-            else:
-                Bc4.config('text') = 'O'
-                break
-        if value == 5:
-            if Bc5.cget('text') == 'X' or Bc5.cget('text') == 'O':
-                continue
-            else:
-                Bc5.config('text') = 'O'
-                break
-        if value == 6:
-            if Bc6.cget('text') == 'X' or Bc6.cget('text') == 'O':
-                continue
-            else:
-                Bc6.config('text') = 'O'
-                break
-        if value == 7:
-            if Bc7.cget('text') == 'X' or Bc7.cget('text') == 'O':
-                continue
-            else:
-                Bc7.config('text') = 'O'
-                break
-        if value == 8:
-            if Bc8.cget('text') == 'X' or Bc8.cget('text') == 'O':
-                continue
-            else:
-                Bc8.config('text') = 'O'
-                break
-        if value == 9:
-            if Bc9.cget('text') == 'X' or Bc9.cget('text') == 'O':
-                continue
-            else:
-                Bc9.config('text') = 'O'
-                break
+    if computer== True:
+        while True:
+            value =random.randint(1,9)
+            if value == 1:
+                if Bc1.cget('text') == 'X' or Bc1.cget('text') == 'O':
+                    continue
+                else:
+                    Bc1.config(text=turn)
+                    break
+            if value == 2:
+                if Bc2.cget('text') == 'X' or Bc2.cget('text') == 'O':
+                    continue
+                else:
+                    Bc2.config(text=turn)
+                    break
+            if value == 3:
+                if Bc3.cget('text') == 'X' or Bc3.cget('text') == 'O':
+                    continue
+                else:
+                    Bc3.config(text=turn)
+                    break
+            if value == 4:
+                if Bc4.cget('text') == 'X' or Bc4.cget('text') == 'O':
+                    continue
+                else:
+                    Bc4.config(text=turn)
+                    break
+            if value == 5:
+                if Bc5.cget('text') == 'X' or Bc5.cget('text') == 'O':
+                    continue
+                else:
+                    Bc5.config(text=turn)
+                    break
+            if value == 6:
+                if Bc6.cget('text') == 'X' or Bc6.cget('text') == 'O':
+                    continue
+                else:
+                    Bc6.config(text=turn)
+                    break
+            if value == 7:
+                if Bc7.cget('text') == 'X' or Bc7.cget('text') == 'O':
+                    continue
+                else:
+                    Bc7.config(text=turn)
+                    break
+            if value == 8:
+                if Bc8.cget('text') == 'X' or Bc8.cget('text') == 'O':
+                    continue
+                else:
+                    Bc8.config(text=turn)
+                    break
+            if value == 9:
+                if Bc9.cget('text') == 'X' or Bc9.cget('text') == 'O':
+                    continue
+                else:
+                    Bc9.config(text=turn)
+                    break
         
 Won= False
 def toggels():
@@ -149,9 +150,10 @@ computer= False
 def compcallback():
     print("zero")
     global computer
-    if computer == False
+    if computer == False:
         computer=True
-    else computer=False
+    else:
+        computer=False
     
 def b1callback():
     global turn
@@ -169,6 +171,7 @@ def b2callback():
         Bc2.configure(text=turn)
         toggels()
         win()
+    ComputerM()
 def b3callback():
     print("three")
     global turn
@@ -177,7 +180,7 @@ def b3callback():
         Bc3.configure(text=turn)
         toggels()
         win()
-    ComputerM
+    ComputerM()
 def b4callback():
     print("four")
     global turn
@@ -187,6 +190,7 @@ def b4callback():
         Bc4.configure(text=turn)
         toggels()
         win()
+    ComputerM()
 def b5callback():
     print("five")
     global turn
@@ -195,6 +199,7 @@ def b5callback():
         Bc5.configure(text=turn)
         toggels()
         win()
+    ComputerM()
 def b6callback():
     print("six")
     global turn
@@ -203,6 +208,7 @@ def b6callback():
         Bc6.configure(text=turn)
         toggels()
         win()
+    ComputerM()
 def b7callback():
     print("seven")
     global turn
@@ -211,6 +217,7 @@ def b7callback():
         Bc7.configure(text=turn)
         toggels()
         win()
+    ComputerM()
 def b8callback():
     print("eight")
     global turn
@@ -219,6 +226,7 @@ def b8callback():
         Bc8.configure(text=turn)
         toggels()
         win()
+    ComputerM()
 def b9callback():
     print("ninne")
     global turn
