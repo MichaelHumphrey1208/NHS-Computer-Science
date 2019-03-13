@@ -85,11 +85,12 @@ def ComputerM():
         
 Won= False
 def toggels():
-    global turn
-    if turn =="X":
-        turn="O"
-    else:
-        turn= 'X'
+    if multiP== True:
+        global turn
+        if turn =="X":
+            turn="O"
+        else:
+            turn= 'X'
 def win():
    global Won
    if Bc1.cget('text') == 'X' and Bc4.cget('text') == 'X' and Bc7.cget('text') == 'X':
@@ -166,15 +167,22 @@ def compcallback():
 def clearcallback():
     clearing()
     print("new game")
+multiP=False
 def multiplayercallback():
     print("two players")
-    
+    print("zero")
+    global multiP
+    if multiP == False:
+        multiP=True
+    else:
+        multiP=False
 def b1callback():
     global turn
     global Won
     if not Won:
         Bc1.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b2callback():
     print("two")
@@ -182,7 +190,8 @@ def b2callback():
     global Won
     if not Won:
         Bc2.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b3callback():
     print("three")
@@ -190,7 +199,8 @@ def b3callback():
     global Won
     if not Won:
         Bc3.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b4callback():
     print("four")
@@ -198,7 +208,8 @@ def b4callback():
     global Won
     if not Won:
         Bc4.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b5callback():
     print("five")
@@ -206,7 +217,8 @@ def b5callback():
     global Won
     if not Won:
         Bc5.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b6callback():
     print("six")
@@ -214,7 +226,8 @@ def b6callback():
     global Won
     if not Won:
         Bc6.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b7callback():
     print("seven")
@@ -222,7 +235,8 @@ def b7callback():
     global Won
     if not Won:
         Bc7.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b8callback():
     print("eight")
@@ -230,7 +244,8 @@ def b8callback():
     global Won
     if not Won:
         Bc8.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 def b9callback():
     print("ninne")
@@ -238,7 +253,8 @@ def b9callback():
     global Won
     if not Won:
         Bc9.configure(text=turn)
-        win()
+    toggels()
+    win()
     ComputerM()
 
 Bclm = tkinter.Button(top, text ="clear", command = clearcallback, height=4, width=9)
