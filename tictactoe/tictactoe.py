@@ -2,7 +2,7 @@ import tkinter
 import random
 top = tkinter.Tk()
 
-top.geometry('200x380')
+top.geometry('260x390')
 top.title("two_tic_tac_toe")
 turn="X"
 def clearing():
@@ -163,6 +163,11 @@ def compcallback():
         computer=True
     else:
         computer=False
+def clearcallback():
+    clearing()
+    print("new game")
+def multiplayercallback():
+    print("two players")
     
 def b1callback():
     global turn
@@ -235,18 +240,23 @@ def b9callback():
         Bc9.configure(text=turn)
         win()
     ComputerM()
-Bc1 = tkinter.Button(top, text ="1", command = b1callback, height=4, width=4)
-Bc2 = tkinter.Button(top, text ="2", command = b2callback, height=4, width=4)
-Bc3 = tkinter.Button(top, text ="3", command = b3callback, height=4, width=4)
-Bc4 = tkinter.Button(top, text ="4", command = b4callback, height=4, width=4)
-Bc5 = tkinter.Button(top, text ="5", command = b5callback, height=4, width=4)
-Bc6 = tkinter.Button(top, text ="6", command = b6callback, height=4, width=4)
-Bc7 = tkinter.Button(top, text ="7", command = b7callback, height=4, width=4)
-Bc8 = tkinter.Button(top, text ="8", command = b8callback, height=4, width=4)
-Bc9 = tkinter.Button(top, text ="9", command = b9callback, height=4, width=4)
-Bc0 = tkinter.Button(top, text ="Computer_mode", command = compcallback, height=4, width=13,)
 
-Bc0.grid(row=0, column=0, columnspan=3)
+Bclm = tkinter.Button(top, text ="clear", command = clearcallback, height=4, width=9)
+Bcm = tkinter.Button(top, text ="2players", command = multiplayercallback, height=4, width=9)
+Bc1 = tkinter.Button(top, text ="1", command = b1callback, height=4, width=9)
+Bc2 = tkinter.Button(top, text ="2", command = b2callback, height=4, width=9)
+Bc3 = tkinter.Button(top, text ="3", command = b3callback, height=4, width=9)
+Bc4 = tkinter.Button(top, text ="4", command = b4callback, height=4, width=9)
+Bc5 = tkinter.Button(top, text ="5", command = b5callback, height=4, width=9)
+Bc6 = tkinter.Button(top, text ="6", command = b6callback, height=4, width=9)
+Bc7 = tkinter.Button(top, text ="7", command = b7callback, height=4, width=9)
+Bc8 = tkinter.Button(top, text ="8", command = b8callback, height=4, width=9)
+Bc9 = tkinter.Button(top, text ="9", command = b9callback, height=4, width=9)
+Bc0 = tkinter.Button(top, text ="singel player", command = compcallback, height=4, width=9,)
+
+Bclm.grid(row=0, column=1, columnspan=1)
+Bcm.grid(row=0, column=2, columnspan=1)
+Bc0.grid(row=0, column=0, columnspan=1)
 Bc1.grid(row=1, column=0)
 Bc2.grid(row=1, column=1)
 Bc3.grid(row=1, column=2)
