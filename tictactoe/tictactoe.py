@@ -23,64 +23,64 @@ def ComputerM():
                 if Bc1.cget('text') == 'X' or Bc1.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc1.config(text=turn)
+                    toggelsCom()
+                    Bc1.config(text="O")
                     break
             if value == 2:
                 if Bc2.cget('text') == 'X' or Bc2.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc2.config(text=turn)
+                    toggelsCom()
+                    Bc2.config(text="O")
                     break
             if value == 3:
                 if Bc3.cget('text') == 'X' or Bc3.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc3.config(text=turn)
+                    toggelsCom()
+                    Bc3.config(text="O")
                     break
             if value == 4:
                 if Bc4.cget('text') == 'X' or Bc4.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc4.config(text=turn)
+                    toggelsCom()
+                    Bc4.config(text="O")
                     break
             if value == 5:
                 if Bc5.cget('text') == 'X' or Bc5.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc5.config(text=turn)
+                    toggelsCom()
+                    Bc5.config(text="O")
                     break
             if value == 6:
                 if Bc6.cget('text') == 'X' or Bc6.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc6.config(text=turn)
+                    toggelsCom()
+                    Bc6.config(text="O")
                     break
             if value == 7:
                 if Bc7.cget('text') == 'X' or Bc7.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc7.config(text=turn)
+                    toggelsCom()
+                    Bc7.config(text="O")
                     break
             if value == 8:
                 if Bc8.cget('text') == 'X' or Bc8.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc8.config(text=turn)
+                    toggelsCom()
+                    Bc8.config(text="O")
                     break
             if value == 9:
                 if Bc9.cget('text') == 'X' or Bc9.cget('text') == 'O':
                     continue
                 else:
-                    toggels()
-                    Bc9.config(text=turn)
+                    toggelsCom()
+                    Bc9.config(text="O")
                     break
         
 Won= False
@@ -91,6 +91,10 @@ def toggels():
             turn="O"
         else:
             turn= 'X'
+def toggelsCom():
+    if computer== True:
+        global turn
+         
 def win():
    global Won
    if Bc1.cget('text') == 'X' and Bc4.cget('text') == 'X' and Bc7.cget('text') == 'X':
@@ -170,7 +174,6 @@ def clearcallback():
 multiP=False
 def multiplayercallback():
     print("two players")
-    print("zero")
     global multiP
     if multiP == False:
         multiP=True
@@ -181,72 +184,80 @@ def b1callback():
     global Won
     if not Won:
         Bc1.configure(text=turn)
-    toggels()
     win()
     ComputerM()
+    toggels()
 def b2callback():
     print("two")
     global turn
     global Won
     if not Won:
         Bc2.configure(text=turn)
-    toggels()
     win()
-    ComputerM()
+    if not Won:
+        ComputerM()
+    toggels()
 def b3callback():
     print("three")
     global turn
     global Won
     if not Won:
         Bc3.configure(text=turn)
+    win()
+    if not Won:
+        ComputerM()
     toggels()
     win()
-    ComputerM()
 def b4callback():
     print("four")
     global turn
     global Won
     if not Won:
         Bc4.configure(text=turn)
-    toggels()
     win()
-    ComputerM()
+    if not Won:
+        ComputerM()
+    toggels()
 def b5callback():
     print("five")
     global turn
     global Won
     if not Won:
         Bc5.configure(text=turn)
-    toggels()
     win()
-    ComputerM()
+    if not Won:
+        ComputerM()
+    toggels()
 def b6callback():
     print("six")
     global turn
     global Won
     if not Won:
         Bc6.configure(text=turn)
-    toggels()
     win()
-    ComputerM()
+    if not Won:
+        ComputerM()
+    toggels()
 def b7callback():
     print("seven")
     global turn
     global Won
     if not Won:
         Bc7.configure(text=turn)
-    toggels()
     win()
-    ComputerM()
+    if not Won:
+        ComputerM()
+    toggels()
 def b8callback():
     print("eight")
     global turn
     global Won
     if not Won:
         Bc8.configure(text=turn)
-    toggels()
     win()
-    ComputerM()
+    if not Won:
+      ComputerM()
+    toggels()
 def b9callback():
     print("ninne")
     global turn
@@ -255,7 +266,9 @@ def b9callback():
         Bc9.configure(text=turn)
     toggels()
     win()
-    ComputerM()
+    if not Won:
+        ComputerM()
+    toggels()
 
 Bclm = tkinter.Button(top, text ="clear", command = clearcallback, height=4, width=9)
 Bcm = tkinter.Button(top, text ="2players", command = multiplayercallback, height=4, width=9)
