@@ -1,6 +1,6 @@
 import tkinter
 top = tkinter.Tk()
-C = tkinter.Canvas(top, bg="blue", height=700, width=700)
+C = tkinter.Canvas(top, bg="blue", height=600, width=700)
 top.geometry('2000x3000')
 top.title("conect_four_board")
 
@@ -72,24 +72,23 @@ def c6callback():
 def c7callback():
     print("c1")
     
-Tc1 = tkinter.Button(top, text ="1", command = c1callback, height=4, width=4)
-Tc2 = tkinter.Button(top, text ="2", command = c2callback, height=4, width=4)
-Tc3 = tkinter.Button(top, text ="3", command = c3callback, height=4, width=4)
-Tc4 = tkinter.Button(top, text ="4", command = c4callback, height=4, width=4)
-Tc5 = tkinter.Button(top, text ="5", command = c5callback, height=4, width=4)
-Tc6 = tkinter.Button(top, text ="6", command = c6callback, height=4, width=4)
-Tc7 = tkinter.Button(top, text ="7", command = c7callback, height=4, width=4)
+Tc1 = tkinter.Button(top, text ="1", command = c1callback, height=4, width=11)
+Tc2 = tkinter.Button(top, text ="2", command = c2callback, height=4, width=11)
+Tc3 = tkinter.Button(top, text ="3", command = c3callback, height=4, width=11)
+Tc4 = tkinter.Button(top, text ="4", command = c4callback, height=4, width=11)
+Tc5 = tkinter.Button(top, text ="5", command = c5callback, height=4, width=11)
+Tc6 = tkinter.Button(top, text ="6", command = c6callback, height=4, width=11)
+Tc7 = tkinter.Button(top, text ="7", command = c7callback, height=4, width=11)
 
-Tc1.place(y=35, x=150)
-Tc2.place(y=35, x=250)
-Tc3.place(y=35, x=350)
-Tc4.place(y=35, x=450)
-Tc5.place(y=35, x=550)
-Tc6.place(y=35, x=650)
-Tc7.place(y=35, x=750)
+Tc1.place(y=34, x=101)
+Tc2.place(y=35, x=201)
+Tc3.place(y=35, x=301)
+Tc4.place(y=35, x=401)
+Tc5.place(y=35, x=501)
+Tc6.place(y=35, x=601)
+Tc7.place(y=35, x=701)
 
 
 
 C.place(x=100, y=100)
 top.mainloop()
-
