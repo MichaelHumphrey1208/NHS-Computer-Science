@@ -68,7 +68,7 @@ row6c7 = C.create_oval(645, 525, 685, 565, fill=colm7[5])
 
 def c1callback():
     if colm1[0] == "white":
-        colm1[0] == "red"
+        colm1[0] = "red"
         print(colm1[0])
 def c2callback():
     print("c1")
