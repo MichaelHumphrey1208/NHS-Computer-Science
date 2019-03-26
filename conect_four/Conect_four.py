@@ -65,10 +65,18 @@ row6c5 = C.create_oval(445, 525, 485, 565, fill=colm5[5])
 row6c6 = C.create_oval(545, 525, 585, 565, fill=colm6[5])
 row6c7 = C.create_oval(645, 525, 685, 565, fill=colm7[5])
 
-
+def turn():
+    global turn
+    turn = "red"
+    if turn == "red":
+        turn = "yellow"
+    else:
+        turn = "red"
+    
 def c1callback():
+    turn()
     if colm1[0] == "white":
-        colm1[0] = "red"
+        colm1[0] = turn
         print(colm1[0])
 def c2callback():
     print("c1")
