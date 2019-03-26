@@ -1,4 +1,5 @@
 import tkinter
+import random
 top = tkinter.Tk()
 C = tkinter.Canvas(top, bg="blue", height=600, width=700)
 top.geometry('2000x3000')
@@ -64,22 +65,33 @@ row6c4 = C.create_oval(345, 525, 385, 565, fill=colm4[5])
 row6c5 = C.create_oval(445, 525, 485, 565, fill=colm5[5])
 row6c6 = C.create_oval(545, 525, 585, 565, fill=colm6[5])
 row6c7 = C.create_oval(645, 525, 685, 565, fill=colm7[5])
-
-def turn():
+def Fturn():
     global turn
-    turn = "red"
+    pl =random.randint(1,2)
+    if pl == 1:
+        turn= "red"
+    else:
+        if pl == 2:
+            turn= "yellow"
+def turns():
+    global turn
+    Fturn()
     if turn == "red":
         turn = "yellow"
     else:
-        turn = "red"
+        if turn == "yellow":
+            turn = "red"
     
 def c1callback():
-    turn()
+    turns()
     if colm1[0] == "white":
         colm1[0] = turn
         print(colm1[0])
 def c2callback():
-    print("c1")
+    turns()
+    if colm2[0] == "white":
+        colm2[0] = turn
+        print(colm2[0])
 def c3callback():
     print("c1")
 def c4callback():
