@@ -68,23 +68,9 @@ def board():
     row6c6 = C.create_oval(545, 525, 585, 565, fill=colm6[5])
     row6c7 = C.create_oval(645, 525, 685, 565, fill=colm7[5])
 board()
-T1= False
-def Fturn():
-    global turn
-    T1= True
-    if T1== True:
-        pl =random.randint(1,2)
-        if pl == 1:
-            turn= "red"
-        else:
-            if pl == 2:
-                turn= "yellow"
-    #                                             1                                            2                    3                       4                                           5                                            6                                            7
-    if colm1[0] == "red" or colm1[0] == "yellow" or colm2[0] == "red" or colm2[0] == "yellow" or colm3[0] == "red" or colm3[0] == "yellow" or colm4[0] == "red" or colm4[0] == "yellow" or colm5[0] == "red" or colm5[0] == "yellow" or colm6[0] == "red" or colm6[0] == "yellow" or colm7[0] == "red" or colm7[0] == "yellow":
-        T1= False
+turn ="red"
 def turns():
     global turn
-    Fturn()
     if turn == "red":
         turn = "yellow"
     else:
@@ -92,54 +78,232 @@ def turns():
             turn = "red"
     
 def c1callback():
-    Fturn()
     turns()
-    if colm1[0] == "white":
-        colm1[0] = turn
-        print(colm1[0])
+    if colm1[5] == "white":
+        colm1[5] = turn
+        print(colm1[5])
+        print(turn)
         board()
+    elif colm1[4] == "white":
+            colm1[4] = turn
+            print(colm1[4])
+            board()
+            print(turn)
+    elif colm1[3] == "white":
+            colm1[3] = turn
+            print(colm1[3])
+            board()
+            print(turn)
+    elif colm1[2] == "white":
+            colm1[2] = turn
+            print(colm1[2])
+            board()
+            print(turn)
+    elif colm1[1] == "white":
+            colm1[1] = turn
+            print(colm1[1])
+            board()
+            print(turn)
+    elif colm1[0] == "white":
+            colm1[0] = turn
+            print(colm1[0])
+            board()
+            print(turn)
+    else:
+        pass
 def c2callback():
-    Fturn()
     turns()
-    if colm2[0] == "white":
-        colm2[0] = turn
-        print(colm2[0])
+    if colm2[5] == "white":
+        colm2[5] = turn
+        print(colm2[5])
+        print(turn)
         board()
+    elif colm2[4] == "white":
+            colm2[4] = turn
+            print(colm2[4])
+            board()
+            print(turn)
+    elif colm2[3] == "white":
+            colm2[3] = turn
+            print(colm2[3])
+            board()
+            print(turn)
+    elif colm2[2] == "white":
+            colm2[2] = turn
+            print(colm2[2])
+            board()
+            print(turn)
+    elif colm2[1] == "white":
+            colm2[1] = turn
+            print(colm2[1])
+            board()
+            print(turn)
+    else:
+        if colm2[0] == "white":
+            colm2[0] = turn
+            print(colm2[0])
+            board()
+            print(turn)
 def c3callback():
-    Fturn()
     turns()
-    if colm3[0] == "white":
-        colm3[0] = turn
-        print(colm3[0])
+    if colm3[5] == "white":
+        colm3[5] = turn
+        print(colm3[5])
         board()
+    elif colm3[4] == "white":
+            colm3[4] = turn
+            print(colm3[4])
+            board()
+            print(turn)
+    elif colm3[3] == "white":
+            colm3[3] = turn
+            print(colm3[3])
+            board()
+            print(turn)
+    elif colm3[2] == "white":
+            colm3[2] = turn
+            print(colm3[2])
+            board()
+            print(turn)
+    elif colm3[1] == "white":
+            colm3[1] = turn
+            print(colm3[1])
+            board()
+            print(turn)
+    else:
+        if colm3[0] == "white":
+            colm3[0] = turn
+            print(colm3[0])
+            board()
+            print(turn)
 def c4callback():
-    Fturn()
     turns()
-    if colm4[0] == "white":
-        colm4[0] = turn
-        print(colm4[0])
+    if colm4[5] == "white":
+        colm4[5] = turn
+        print(colm4[5])
         board()
+    elif colm4[4] == "white":
+            colm4[4] = turn
+            print(colm4[4])
+            board()
+            print(turn)
+    elif colm4[3] == "white":
+            colm4[3] = turn
+            print(colm4[3])
+            board()
+            print(turn)
+    elif colm4[2] == "white":
+            colm4[2] = turn
+            print(colm4[2])
+            board()
+            print(turn)
+    elif colm4[1] == "white":
+            colm4[1] = turn
+            print(colm4[1])
+            board()
+            print(turn)
+    else:
+        if colm4[0] == "white":
+            colm4[0] = turn
+            print(colm4[0])
+            board()
+            print(turn)
 def c5callback():
-    Fturn()
     turns()
-    if colm5[0] == "white":
-        colm5[0] = turn
-        print(colm5[0])
+    if colm5[5] == "white":
+        colm5[5] = turn
+        print(colm5[5])
         board()
+    elif colm5[4] == "white":
+            colm5[4] = turn
+            print(colm5[4])
+            board()
+            print(turn)
+    elif colm5[3] == "white":
+            colm5[3] = turn
+            print(colm5[3])
+            board()
+            print(turn)
+    elif colm5[2] == "white":
+            colm5[2] = turn
+            print(colm5[2])
+            board()
+            print(turn)
+    elif colm5[1] == "white":
+            colm5[1] = turn
+            print(colm5[1])
+            board()
+            print(turn)
+    else:
+        if colm5[0] == "white":
+            colm5[0] = turn
+            print(colm5[0])
+            board()
+            print(turn)
 def c6callback():
-    Fturn()
     turns()
-    if colm6[0] == "white":
-        colm6[0] = turn
-        print(colm6[0])
+    if colm6[5] == "white":
+        colm6[5] = turn
+        print(colm6[5])
         board()
+    elif colm6[4] == "white":
+            colm6[4] = turn
+            print(colm6[4])
+            board()
+            print(turn)
+    elif colm6[3] == "white":
+            colm6[3] = turn
+            print(colm6[3])
+            board()
+            print(turn)
+    elif colm6[2] == "white":
+            colm6[2] = turn
+            print(colm6[2])
+            board()
+            print(turn)
+    elif colm6[1] == "white":
+            colm6[1] = turn
+            print(colm6[1])
+            board()
+            print(turn)
+    else:
+        if colm6[0] == "white":
+            colm6[0] = turn
+            print(colm6[0])
+            board()
+            print(turn)
 def c7callback():
-    Fturn()
     turns()
-    if colm7[0] == "white":
-        colm7[0] = turn
-        print(colm7[0])
+    if colm7[5] == "white":
+        colm7[5] = turn
+        print(colm7[5])
         board()
+    elif colm7[4] == "white":
+            colm7[4] = turn
+            print(colm7[4])
+            board()
+            print(turn)
+    elif colm7[3] == "white":
+            colm7[3] = turn
+            print(colm7[3])
+            board()
+            print(turn)
+    elif colm7[2] == "white":
+            colm7[2] = turn
+            print(colm7[2])
+            board()
+            print(turn)
+    elif colm7[1] == "white":
+            colm7[1] = turn
+            print(colm7[1])
+            board()
+            print(turn)
+    else:
+        if colm7[0] == "white":
+            colm7[0] = turn
+            print(colm7[0])
+            board()
+            print(turn)
     
 Tc1 = tkinter.Button(top, text ="1", command = c1callback, height=4, width=11)
 Tc2 = tkinter.Button(top, text ="2", command = c2callback, height=4, width=11)
