@@ -76,7 +76,9 @@ def turns():
     else:
         if turn == "yellow":
             turn = "red"
-    
+
+def comcallback():
+    print("yes")
 def c1callback():
     turns()
     if colm1[5] == "white":
@@ -310,6 +312,7 @@ def c7callback():
             print(turn)
     else:
         turns()
+CM = tkinter.Button(top, text ="PVC", command = comcallback, height=4, width=11)
 Tc1 = tkinter.Button(top, text ="1", command = c1callback, height=4, width=11)
 Tc2 = tkinter.Button(top, text ="2", command = c2callback, height=4, width=11)
 Tc3 = tkinter.Button(top, text ="3", command = c3callback, height=4, width=11)
@@ -318,7 +321,8 @@ Tc5 = tkinter.Button(top, text ="5", command = c5callback, height=4, width=11)
 Tc6 = tkinter.Button(top, text ="6", command = c6callback, height=4, width=11)
 Tc7 = tkinter.Button(top, text ="7", command = c7callback, height=4, width=11)
 
-Tc1.place(y=34, x=101)
+CM.place(y=35, x=1)
+Tc1.place(y=35, x=101)
 Tc2.place(y=35, x=201)
 Tc3.place(y=35, x=301)
 Tc4.place(y=35, x=401)
