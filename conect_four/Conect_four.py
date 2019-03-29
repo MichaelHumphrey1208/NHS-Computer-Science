@@ -110,7 +110,7 @@ def c1callback():
             board()
             print(turn)
     else:
-        pass
+        turns()
 def c2callback():
     turns()
     if colm2[5] == "white":
@@ -138,12 +138,13 @@ def c2callback():
             print(colm2[1])
             board()
             print(turn)
-    else:
-        if colm2[0] == "white":
+    elif colm2[0] == "white":
             colm2[0] = turn
             print(colm2[0])
             board()
             print(turn)
+    else:
+        turns()
 def c3callback():
     turns()
     if colm3[5] == "white":
@@ -170,12 +171,13 @@ def c3callback():
             print(colm3[1])
             board()
             print(turn)
-    else:
-        if colm3[0] == "white":
+    elif colm3[0] == "white":
             colm3[0] = turn
             print(colm3[0])
             board()
             print(turn)
+    else:
+        turns()
 def c4callback():
     turns()
     if colm4[5] == "white":
@@ -202,12 +204,13 @@ def c4callback():
             print(colm4[1])
             board()
             print(turn)
-    else:
-        if colm4[0] == "white":
+    elif colm4[0] == "white":
             colm4[0] = turn
             print(colm4[0])
             board()
             print(turn)
+    else:
+        turns()
 def c5callback():
     turns()
     if colm5[5] == "white":
@@ -234,12 +237,13 @@ def c5callback():
             print(colm5[1])
             board()
             print(turn)
-    else:
-        if colm5[0] == "white":
+    elif colm5[0] == "white":
             colm5[0] = turn
             print(colm5[0])
             board()
             print(turn)
+    else:
+        turns()
 def c6callback():
     turns()
     if colm6[5] == "white":
@@ -266,12 +270,13 @@ def c6callback():
             print(colm6[1])
             board()
             print(turn)
-    else:
-        if colm6[0] == "white":
+    elif colm6[0] == "white":
             colm6[0] = turn
             print(colm6[0])
             board()
             print(turn)
+    else:
+        turns()
 def c7callback():
     turns()
     if colm7[5] == "white":
@@ -298,13 +303,13 @@ def c7callback():
             print(colm7[1])
             board()
             print(turn)
-    else:
-        if colm7[0] == "white":
+    elif colm7[0] == "white":
             colm7[0] = turn
             print(colm7[0])
             board()
             print(turn)
-    
+    else:
+        turns()
 Tc1 = tkinter.Button(top, text ="1", command = c1callback, height=4, width=11)
 Tc2 = tkinter.Button(top, text ="2", command = c2callback, height=4, width=11)
 Tc3 = tkinter.Button(top, text ="3", command = c3callback, height=4, width=11)
