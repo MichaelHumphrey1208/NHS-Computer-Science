@@ -76,9 +76,7 @@ def turns():
     else:
         if turn == "yellow":
             turn = "red"
-
-def comcallback():
-    print("yes")
+computer= False
 def c1callback():
     turns()
     if colm1[5] == "white":
@@ -113,6 +111,8 @@ def c1callback():
             print(turn)
     else:
         turns()
+    if computer == True:
+        comcallback()
 def c2callback():
     turns()
     if colm2[5] == "white":
@@ -147,6 +147,8 @@ def c2callback():
             print(turn)
     else:
         turns()
+    if computer == True:
+        comcallback()
 def c3callback():
     turns()
     if colm3[5] == "white":
@@ -180,6 +182,8 @@ def c3callback():
             print(turn)
     else:
         turns()
+    if computer == True:
+        comcallback()
 def c4callback():
     turns()
     if colm4[5] == "white":
@@ -213,6 +217,8 @@ def c4callback():
             print(turn)
     else:
         turns()
+    if computer == True:
+        comcallback()
 def c5callback():
     turns()
     if colm5[5] == "white":
@@ -246,6 +252,8 @@ def c5callback():
             print(turn)
     else:
         turns()
+    if computer == True:
+        comcallback()
 def c6callback():
     turns()
     if colm6[5] == "white":
@@ -279,6 +287,8 @@ def c6callback():
             print(turn)
     else:
         turns()
+    if computer == True:
+        comcallback()
 def c7callback():
     turns()
     if colm7[5] == "white":
@@ -312,6 +322,263 @@ def c7callback():
             print(turn)
     else:
         turns()
+    if computer == True:
+        comcallback()
+#cumputers functions
+def cc1call():
+    turns()
+    if colm1[5] == "white":
+        colm1[5] = turn
+        print(colm1[5])
+        print(turn)
+        board()
+    elif colm1[4] == "white":
+            colm1[4] = turn
+            print(colm1[4])
+            board()
+            print(turn)
+    elif colm1[3] == "white":
+            colm1[3] = turn
+            print(colm1[3])
+            board()
+            print(turn)
+    elif colm1[2] == "white":
+            colm1[2] = turn
+            print(colm1[2])
+            board()
+            print(turn)
+    elif colm1[1] == "white":
+            colm1[1] = turn
+            print(colm1[1])
+            board()
+            print(turn)
+    elif colm1[0] == "white":
+            colm1[0] = turn
+            print(colm1[0])
+            board()
+            print(turn)
+    else:
+        turns()
+def cc2call():
+    turns()
+    if colm2[5] == "white":
+        colm2[5] = turn
+        print(colm2[5])
+        print(turn)
+        board()
+    elif colm2[4] == "white":
+            colm2[4] = turn
+            print(colm2[4])
+            board()
+            print(turn)
+    elif colm2[3] == "white":
+            colm2[3] = turn
+            print(colm2[3])
+            board()
+            print(turn)
+    elif colm2[2] == "white":
+            colm2[2] = turn
+            print(colm2[2])
+            board()
+            print(turn)
+    elif colm2[1] == "white":
+            colm2[1] = turn
+            print(colm2[1])
+            board()
+            print(turn)
+    elif colm2[0] == "white":
+            colm2[0] = turn
+            print(colm2[0])
+            board()
+            print(turn)
+    else:
+        turns()
+def cc3call():
+    turns()
+    if colm3[5] == "white":
+        colm3[5] = turn
+        print(colm3[5])
+        board()
+    elif colm3[4] == "white":
+            colm3[4] = turn
+            print(colm3[4])
+            board()
+            print(turn)
+    elif colm3[3] == "white":
+            colm3[3] = turn
+            print(colm3[3])
+            board()
+            print(turn)
+    elif colm3[2] == "white":
+            colm3[2] = turn
+            print(colm3[2])
+            board()
+            print(turn)
+    elif colm3[1] == "white":
+            colm3[1] = turn
+            print(colm3[1])
+            board()
+            print(turn)
+    elif colm3[0] == "white":
+            colm3[0] = turn
+            print(colm3[0])
+            board()
+            print(turn)
+    else:
+        turns()
+def cc4call():
+    turns()
+    if colm4[5] == "white":
+        colm4[5] = turn
+        print(colm4[5])
+        board()
+    elif colm4[4] == "white":
+            colm4[4] = turn
+            print(colm4[4])
+            board()
+            print(turn)
+    elif colm4[3] == "white":
+            colm4[3] = turn
+            print(colm4[3])
+            board()
+            print(turn)
+    elif colm4[2] == "white":
+            colm4[2] = turn
+            print(colm4[2])
+            board()
+            print(turn)
+    elif colm4[1] == "white":
+            colm4[1] = turn
+            print(colm4[1])
+            board()
+            print(turn)
+    elif colm4[0] == "white":
+            colm4[0] = turn
+            print(colm4[0])
+            board()
+            print(turn)
+    else:
+        turns()
+def cc5call():
+    turns()
+    if colm5[5] == "white":
+        colm5[5] = turn
+        print(colm5[5])
+        board()
+    elif colm5[4] == "white":
+            colm5[4] = turn
+            print(colm5[4])
+            board()
+            print(turn)
+    elif colm5[3] == "white":
+            colm5[3] = turn
+            print(colm5[3])
+            board()
+            print(turn)
+    elif colm5[2] == "white":
+            colm5[2] = turn
+            print(colm5[2])
+            board()
+            print(turn)
+    elif colm5[1] == "white":
+            colm5[1] = turn
+            print(colm5[1])
+            board()
+            print(turn)
+    elif colm5[0] == "white":
+            colm5[0] = turn
+            print(colm5[0])
+            board()
+            print(turn)
+    else:
+        turns()
+def cc6call():
+    turns()
+    if colm6[5] == "white":
+        colm6[5] = turn
+        print(colm6[5])
+        board()
+    elif colm6[4] == "white":
+            colm6[4] = turn
+            print(colm6[4])
+            board()
+            print(turn)
+    elif colm6[3] == "white":
+            colm6[3] = turn
+            print(colm6[3])
+            board()
+            print(turn)
+    elif colm6[2] == "white":
+            colm6[2] = turn
+            print(colm6[2])
+            board()
+            print(turn)
+    elif colm6[1] == "white":
+            colm6[1] = turn
+            print(colm6[1])
+            board()
+            print(turn)
+    elif colm6[0] == "white":
+            colm6[0] = turn
+            print(colm6[0])
+            board()
+            print(turn)
+    else:
+        turns()
+def cc7call():
+    turns()
+    if colm7[5] == "white":
+        colm7[5] = turn
+        print(colm7[5])
+        board()
+    elif colm7[4] == "white":
+            colm7[4] = turn
+            print(colm7[4])
+            board()
+            print(turn)
+    elif colm7[3] == "white":
+            colm7[3] = turn
+            print(colm7[3])
+            board()
+            print(turn)
+    elif colm7[2] == "white":
+            colm7[2] = turn
+            print(colm7[2])
+            board()
+            print(turn)
+    elif colm7[1] == "white":
+            colm7[1] = turn
+            print(colm7[1])
+            board()
+            print(turn)
+    elif colm7[0] == "white":
+            colm7[0] = turn
+            print(colm7[0])
+            board()
+            print(turn)
+    else:
+        turns()
+def comcallback():
+    global computer
+    computer= True
+    if computer == True:
+        value =random.randint(1,7)
+        if value ==1:
+            cc1call()
+            print("computer")
+        elif value ==2:
+            cc2call()
+        elif value ==3:
+            cc3call()
+        elif value ==4:
+            cc4call()
+        elif value ==5:
+            cc5call()
+        elif value ==6:
+            cc6call()
+        else:
+            value ==7
+            cc7call()
 CM = tkinter.Button(top, text ="PVC", command = comcallback, height=4, width=11)
 Tc1 = tkinter.Button(top, text ="1", command = c1callback, height=4, width=11)
 Tc2 = tkinter.Button(top, text ="2", command = c2callback, height=4, width=11)
