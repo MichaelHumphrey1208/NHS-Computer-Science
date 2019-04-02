@@ -67,6 +67,8 @@ def board():
     row6c5 = C.create_oval(445, 525, 485, 565, fill=colm5[5])
     row6c6 = C.create_oval(545, 525, 585, 565, fill=colm6[5])
     row6c7 = C.create_oval(645, 525, 685, 565, fill=colm7[5])
+def wining():
+    
 board()
 turn ="red"
 def turns():
